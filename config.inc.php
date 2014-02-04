@@ -1,8 +1,8 @@
 <?php
 	/**
-	 * REX Multiupload - Multi Upload Utility
+	 * Language Copy
 	 *
-	 * @link https://github.com/nightstomp/rex_multiupload
+	 * @link https://github.com/nightstomp/rex_language_copy
 	 *
 	 * @author Thomas Göllner, Hirbod Mirjavadi info[at]nightstomp.com
 	 *
@@ -22,10 +22,6 @@
 	'SUBVERSION' => 0
 	);
 
-	// CREATE LANG OBJ FOR THIS ADDON
-	#if (!$REX['GG']) $I18N_EVENTCALENDAR = new i18n($REX['LANG'],$REX['INCLUDE_PATH']."/addons/$mypage/lang");
-	$I18N_LC = new i18n($REX['LANG'],$REX['INCLUDE_PATH']."/addons/$mypage/lang");
-
 	// unique id
 	$REX['ADDON']['rxid'][$mypage] = '1150';
 	// foldername
@@ -35,4 +31,11 @@
 	$REX['ADDON']['name'][$mypage] = 'Language Copy';
 	$REX['ADDON']['perm'][$mypage] = 'rex_language_copy[]';
 	$REX['PERM'][] = 'rex_language_copy[]';
+
+	// CREATE LANG OBJ FOR THIS ADDON
+	if($REX['REDAXO']){
+		$I18N_LC = new i18n($REX['LANG'],$REX['INCLUDE_PATH']."/addons/$mypage/lang");
+	}
+
+
 ?>
