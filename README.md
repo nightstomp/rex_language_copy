@@ -8,4 +8,4 @@ Bitte den Ordner einfach nur hochladen. Es muss nichts angepasst werden, selbst 
 
 Fork von: http://www.redaxo.org/de/download/addons/?addon_id=226&searchtxt=language&cat_id=-1
 
-Diese Version hat mit Redaxo 4 nicht mehr funktioniert. Dieser Fork fixed einige Probleme und läuft nun äußerst zuverlässig. (in mehreren Umgebungen getestet)
+Diese alte Version hat mit Redaxo 4 nicht mehr funktioniert. Dieser Fork fixed einige Probleme und läuft nun äußerst zuverlässig. (in mehreren Umgebungen getestet)
