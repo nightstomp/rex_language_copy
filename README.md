@@ -3,6 +3,9 @@ rex_language_copy
 
 Redaxo 3.2+ - 4.5+ Language Copy
 
+Kein lästiges Kopieren der Inhalte von einer Sprache in die nächste. Lass eine intiale Kopie automatisch erstellen.
+Kombatibel von Redaxo 3.2+ bis 4.5+ - Inhalte von Sprache A nach Sprache B kopieren. Ausgangs- und Zielsprache können gewählt werden.
+
 Bitte den Ordner einfach nur hochladen. Es muss nichts angepasst werden, selbst der Ordner muss nicht umbenannt werden - das erledigt das Install-Script vollautomatisch. Anschließend ins AddOn wechseln, Start und Zielsprache wählen, gewünschte Haken setzen und starten.
 
 
