@@ -1,7 +1,7 @@
 <?php
   $message = array();
 
-  include_once($REX['INCLUDE_PATH'].'/addons/language_copy/functions/copy.inc.php');
+  include_once($REX['INCLUDE_PATH'].'/addons/rex_language_copy/functions/copy.inc.php');
 
   include $REX['INCLUDE_PATH']."/layout/top.php";
 ?>
@@ -23,7 +23,7 @@
 </script>
   <div class="rex-addon">
     <div id="rex-title">
-      <div class="rex-title-row"><h1><?php echo $REX['ADDON']['name']['language_copy']; ?></h1></div>
+      <div class="rex-title-row"><h1><?php echo $REX['ADDON']['name']['rex_language_copy']; ?></h1></div>
       <div class="rex-title-row">
       </div>
     </div>
@@ -62,7 +62,7 @@
   if(count($REX['CLANG'])>0)
   {
 ?>
-        <form action="?page=language_copy&amp;clang=<?php echo $REX['CUR_CLANG']; ?>" method="post">
+        <form action="?page=rex_language_copy&amp;clang=<?php echo $REX['CUR_CLANG']; ?>" method="post">
 <?php
   if(!isset($start_steps_at) || $start_steps_at<0)
   {

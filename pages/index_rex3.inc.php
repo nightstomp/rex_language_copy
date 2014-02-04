@@ -1,7 +1,7 @@
 <?php
   $message = array();
   
-  include_once($REX['INCLUDE_PATH'].'/addons/language_copy/functions/copy.inc.php');
+  include_once($REX['INCLUDE_PATH'].'/addons/rex_language_copy/functions/copy.inc.php');
 
   include $REX['INCLUDE_PATH']."/layout/top.php";
 ?>
@@ -27,7 +27,7 @@
   <br />
   <table style="width: 770px" cellpadding="0" cellspacing="0">
     <tr style="height: 30px">
-       <td class="grey">&nbsp;&nbsp;<b class="head"><?= $REX['ADDON']['name']['language_copy']; ?></b></td>
+       <td class="grey">&nbsp;&nbsp;<b class="head"><?= $REX['ADDON']['name']['rex_language_copy']; ?></b></td>
        <td rowspan="3" style="width: 153px"><img src="pics/logo.gif" alt="Das REDAXO Logo" title="REDAXO" style="width: 153px; height: 61px;"/></td>
     </tr>
       
@@ -73,7 +73,7 @@
   if(count($REX['CLANG'])>0)
   {
 ?>
-    <form action="?page=language_copy&amp;clang=<?= $REX['CUR_CLANG']; ?>" method="post">
+    <form action="?page=rex_language_copy&amp;clang=<?= $REX['CUR_CLANG']; ?>" method="post">
 <?php
   if(!isset($start_steps_at) || $start_steps_at<0)
   {
