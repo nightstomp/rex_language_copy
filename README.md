@@ -1,4 +1,4 @@
-language_copy
+rex_language_copy
 =============
 
 Redaxo 4 Language Copy
