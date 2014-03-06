@@ -7,7 +7,7 @@
 	 * @author Thomas Göllner, Hirbod Mirjavadi info[at]nightstomp.com
 	 *
 	 * @package redaxo4.3.x, redaxo4.4.x, redaxo4.5.x
-	 * @version 1.5.1
+	 * @version 1.5.2
 	 */
 
 	// ADDON IDENTIFIER
@@ -19,7 +19,7 @@
 	(
 	'VERSION' => 1,
 	'MINORVERSION' => 5,
-	'SUBVERSION' => 1
+	'SUBVERSION' => 2
 	);
 
 	// unique id
