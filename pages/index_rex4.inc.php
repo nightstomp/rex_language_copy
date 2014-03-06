@@ -72,15 +72,14 @@
             <td style="width: 15%" valign="middle" align="left">
               <select name="clang_a" size="1"  style="width:100px;" id="clang_a">
 <?php
-  foreach($REX['CLANG'] as $l)
+  foreach($REX['CLANG'] as $k => $v)
   {
     echo '      
-                <option value="'.key($REX['CLANG']).'"';
-    if(isset($clang_a) && $clang_a==key($REX['CLANG']))
+                <option value="'.$k.'"';
+    if(isset($clang_a) && $clang_a==$k)
       echo ' selected="selected"';
 
-    echo '>'.current($REX['CLANG']).'</option>';
-    next($REX['CLANG']);
+    echo '>'.$v.'</option>';
   }
 ?>
               </select>
@@ -91,15 +90,14 @@
             <td style="width: 15%" valign="middle" align="left">
               <select name="clang_b" size="1"  style="width:100px;" id="clang_b">
 <?php
-  foreach($REX['CLANG'] as $l)
+  foreach($REX['CLANG'] as $k => $v)
   {
     echo '      
-                <option value="'.key($REX['CLANG']).'"';
-    if(isset($clang_b) && $clang_b==key($REX['CLANG']))
+                <option value="'.$k.'"';
+    if(isset($clang_b) && $clang_b==$k)
       echo ' selected="selected"';
 
-    echo '>'.current($REX['CLANG']).'</option>';
-    next($REX['CLANG']);
+    echo '>'.$v.'</option>';
   }
 ?>
               </select>
