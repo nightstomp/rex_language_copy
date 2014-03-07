@@ -1,10 +1,8 @@
 <?php
   $message = array();
-
-  include_once($REX['INCLUDE_PATH'].'/addons/rex_language_copy/functions/copy.inc.php');
-
-  include $REX['INCLUDE_PATH']."/layout/top.php";
+  include_once($REX['INCLUDE_PATH'].'/addons/rex_language_copy/functions/copy_content.inc.php');
 ?>
+
 <script type="text/javascript">
 <!--
   function confirmSubmit(text,form) {
@@ -22,19 +20,11 @@
 //-->
 </script>
   <div class="rex-addon">
-    <div id="rex-title">
-      <div class="rex-title-row"><h1><?php echo $REX['ADDON']['name']['rex_language_copy']; ?></h1></div>
-      <div class="rex-title-row">
-      </div>
-    </div>
-
-    <br />
-
     <table class="rex-table">
       <thead>
         <tr>
           <th class="rex-icon">&nbsp;</th>
-          <th colspan="6"><?php echo $I18N_LC->msg('language_select'); ?></th>
+          <th colspan="5"><?php echo $I18N_LC->msg('language_select'); ?></th>
         </tr>
       </thead>
       <tbody>
@@ -50,9 +40,6 @@
         '.$m.'<br />';
 ?>
           </td>
-        </tr>
-        <tr style="height: 5px">
-          <td colspan="6" style="height: 5px">&nbsp;</td>
         </tr>
 <?php
   }
@@ -102,10 +89,8 @@
 ?>
               </select>
             </td>
-            <td style="width: 15%" valign="middle" align="left">
+            <td valign="middle" align="left">
               <?php echo $I18N_LC->msg('copy'); ?>
-            </td>
-            <td style="width: 20%" valign="middle" align="left">
             </td>
           </tr>
     
@@ -179,6 +164,3 @@
       </tbody>
     </table>
   </div>
-<?php
-  include $REX['INCLUDE_PATH']."/layout/bottom.php";
-?>
