@@ -3,12 +3,10 @@
   // need rex_copyContent
   include_once('include/functions/function_rex_content.inc.php');
 
-  $copy_language_content = trim(rex_post('copy_language_content', 'string', ''));
-
-  if(isset($copy_language_content) && $copy_language_content != '')
+  if(isset($_POST['copy_language_content']) && trim($_POST['copy_language_content'])!='')
   {
-    $clang_a = rex_post('clang_a', 'int');
-    $clang_b = rex_post('clang_b', 'int');
+    $clang_a = intval(trim($_POST['clang_a']));
+    $clang_b = intval(trim($_POST['clang_b']));
     
     if($clang_a!=$clang_b)
     {
@@ -18,16 +16,14 @@
         $clang_a = strval($clang_a);
         $clang_b = strval($clang_b);
         
-        $sql = rex_sql::factory();
+        $sql = new sql;
       
-        $delete_old_content = rex_post('delete_old_content', 'int');
-
-        if($delete_old_content=='true') {
+        $delete_old_content = trim($_POST['delete_old_content']);
+        if($delete_old_content=='true')
           $delete_old_content = true;
-        } else {
+        else
           $delete_old_content = false;
-        }
-
+          
         if($delete_old_content)
         {
           // Delete old article slices
@@ -38,38 +34,34 @@
         
         // should the copying be made stepwise?
         
-        $articles_per_step = rex_post('articles_per_step', 'int');
-
-        if($articles_per_step) {
-          $articles_per_step = $articles_per_step;
-        } else {
+        if(isset($_POST['articles_per_step']))
+          $articles_per_step = intval(trim($_POST['articles_per_step']));
+        else
           $articles_per_step = 0;
-        }
-
+          
         if($articles_per_step>0)
         {
-
-          $start_steps_at = rex_post('start_steps_at', 'int');
-
-          if($start_steps_at) {
-            $start_steps_at = $start_steps_at;
-          } else {
+          if(isset($_POST['start_steps_at']))
+            $start_steps_at = intval(trim($_POST['start_steps_at']));
+          else
             $start_steps_at = 0;
-          }
-
+            
           $limit = ' LIMIT '.strval($start_steps_at).','.strval($articles_per_step);
-        } else {
-          $limit = '';
         }
+        else
+          $limit = '';
         
         // Get the number of articles
         $qry = "SELECT COUNT(*) FROM `".$REX['TABLE_PREFIX']."article` WHERE `clang`='".$clang_a."'";
-        $number_of_articles = $sql->getArray($qry);
+        $sql->setQuery($qry);
+        $number_of_articles = $sql->get_array();
         $number_of_articles = $number_of_articles[0]['COUNT(*)'];
 
         // Get the ids of all articles of language clang_a
         $qry = "SELECT `id`, `clang`, `name` FROM `".$REX['TABLE_PREFIX']."article` WHERE `clang`='".$clang_a."'".$limit;
-        $articles = $sql->getArray($qry);
+        $sql->setQuery($qry);
+
+        $articles = $sql->get_array();
     
         // now copy the content of each article one by one
         if(count($articles)>0)
@@ -100,16 +92,15 @@
             $start_steps_at+=$articles_per_step; // otherwise set the start_steps_at-Variable
           }
 
-        } else {
-          $start_steps_at=-1;
         }
+        else
+          $start_steps_at=-1;
 
-      } else {
-        $message[] = $I18N_LC->msg('error_wrong_languages').'<br />';
       }
-
-    } else {
-      $message[] = rex_warning($I18N_LC->msg('error_double_language'));
+      else
+        $message[] = $I18N_LC->msg('error_wrong_languages').'<br />';
     }
+    else
+      $message[] = $I18N_LC->msg('error_double_language').'<br />';
   }
 ?>

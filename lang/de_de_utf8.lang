@@ -8,7 +8,7 @@ start = ausf&uuml;hren
 
 delete_old_content = Alte Inhalte vorher l&ouml;schen (sonst werden die neuen Inhalte drangeh&auml;ngt).
 
-confirm_copy = Sollen wirklich alle Inhalte kopiert werden?\nFalls Sie 'Inhalte löschen' aktviert haben, werden alle Inhalte unwiderruflich entfernt!
+confirm_copy = Sollen wirklich alle Inhalte kopiert werden?\nFalls Sie 'Inhalte lÃ¶schen' aktviert haben, werden alle Inhalte unwiderruflich entfernt!
 
 content_copied = Inhalte in Artikel <strong>{0}</strong> ({1}) wurden von {2} nach {3} kopiert.
 error_double_language = Sie k&ouml;nnen die Inhalte einer Sprache nicht in dieselbe Sprachversion kopieren.
