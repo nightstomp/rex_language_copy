@@ -1,19 +1,42 @@
 # addon:language_copy de_de
 
+addon_name = Sprachen / Meta kopieren und synchronisieren
+no_rights = Sie haben keine Rechte für dieses AddOn!
 language_select = Spachauswahl
 content_from_language = Inhalte von 
-to_language = nach
-copy = kopieren.
-start = ausf&uuml;hren
+meta_from_language = Daten von
+to_language = nach / mit
+copy = kopieren / synchronisieren.
+copy_content = Inhalte kopieren
+copy_meta = Metadaten kopieren / Struktur synchronisieren
+start = Ausführen
+status = Onlinestatus
+template = Template
+catprior = Kategorie Priorität
+prior = Artikel Priorität
+structure = Struktur
+metadatas = Metadaten
+metadatas_art = Artikel-Metadaten
+metadatas_cat = Kategorie-Metadaten
+choose_meta = Felder wählen
+no_fields_selected = Es wurden keine Felder ausgewählt
+art_name = Artikelname
+cat_name = Kategoriename
 
-delete_old_content = Alte Inhalte vorher l&ouml;schen (sonst werden die neuen Inhalte drangeh&auml;ngt).
+field = Feld
+sync_finished_for = Aktion abgeschlossen: 
+to = nach
+synced = synchronisiert
+cleared_cache = Der Cache wurde für die jeweiligen Artikel aktualisiert
 
-confirm_copy = Sollen wirklich alle Inhalte kopiert werden?\nFalls Sie 'Inhalte l�schen' aktviert haben, werden alle Inhalte unwiderruflich entfernt!
+delete_old_content = Alte Inhalte vorher löschen (sonst werden die neuen Inhalte drangehängt).
+
+confirm_copy = Sollen wirklich alle Inhalte kopiert werden?\nFalls 'Inhalte löschen' aktviert wurde, werden alle Inhalte unwiderruflich entfernt!\n\nBitte unbedingt vorher ein Backup anlegen!
 
 content_copied = Inhalte in Artikel <strong>{0}</strong> ({1}) wurden von {2} nach {3} kopiert.
-error_double_language = Sie k&ouml;nnen die Inhalte einer Sprache nicht in dieselbe Sprachversion kopieren.
-error_wrong_languages = Ung&uuml;ltige Sprachen ausgew&auml;hlt.
-slices_deleted = Die alten Inhalte wurden gel&ouml;scht.
+error_double_language = Inhalte einer Sprache können nicht in dieselbe Sprachversion kopiert werden.
+error_wrong_languages = Ungültige Sprachen ausgewählt.
+slices_deleted = Die alten Inhalte wurden gelöscht.
 
 no_languages = Es ist nur eine Sprache aktiviert.
 
